@@ -3,11 +3,11 @@ import React from 'react'
 
 const Skills = () => {
   const skills = [
-    {id: 'html', color: 'bg-blue-200', height: '300px', width: '350px'},
-    {id: 'javascript', color: 'bg-blue-300', height: '300px', width: '350px'},
-    {id: 'css', color: 'bg-blue-400', height: '300px', width: '350px'},
-    {id: 'python', color: 'bg-blue-500', height: '300px', width: '350px'},
-    {id: 'java', color: 'bg-blue-600', height: '300px', width: '350px'},
+    {id: 'Languages', color: 'bg-blue-200', height: '300px', width: '350px', description: 'Python, Java, JavaScript, SQL, HTML, CSS'},
+    {id: 'Databases', color: 'bg-blue-300', height: '300px', width: '350px'},
+    {id: 'Tools', color: 'bg-blue-400', height: '300px', width: '350px'},
+    {id: 'Frameworks', color: 'bg-blue-500', height: '300px', width: '350px'},
+    {id: 'Others', color: 'bg-blue-600', height: '300px', width: '350px'},
   ]
   return (
     <>
@@ -26,7 +26,11 @@ const Skills = () => {
             className={`${skill.color} rounded-lg flex items-center justify-center text-white text-xl`}
             style={{ width: skill.width, height: skill.height }}
           >
-            {skill.id} 
+            <div className='flex-col text-center'>
+              <p>{skill.id}</p>
+              <p>{skill.description}</p>
+            </div>
+            
           </swiper-slide>
         ))}
       </swiper-container>
