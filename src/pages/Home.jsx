@@ -1,4 +1,5 @@
 import React, {use, useState} from 'react'
+import HomeSection from '../components/HomeSection'
 import NavBar from '../components/NavBar'
 import AboutMe from '../components/AboutMe'
 import Projects from '../components/Projects'
@@ -83,6 +84,7 @@ const Home = () => {
             <div className='snap-home-parent' onScroll={handleProjectsScroll} id='window'>
                 {sections.map((section) => (
                     <section key={section.id} id={section.id} className={`snap-center snap-home-child bg-[var(--background)] h-${section.height}`}>
+                        {section.id == 'home' && <HomeSection />}
                         {section.id == 'about-me' && <AboutMe />}
                         {section.id == 'projects' && <Projects isVisible={isVisible}/>}
                         {section.id == 'skills' && <Skills />}
@@ -90,17 +92,10 @@ const Home = () => {
                         {section.id == 'footer' && <Footer />}
                     </section>
                 ))}
+                
             </div> 
 
-            <div className=''>
-                <div>intro</div>
-                <div>
-                    {/* picture */}
-                    <img src="me.png" alt="A picture of Mandy Ly" />
-                </div>
-            </div>
             
-
         </div>
     )
 }
