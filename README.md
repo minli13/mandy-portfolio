@@ -15,7 +15,4 @@ Live Site: https://mandy-portfolio-three.vercel.app/
 - Project sections with demos and source code
 - Clean and minimal UI
 
-## Running Locally
-npm install
-npm run dev
 
