@@ -8,10 +8,22 @@
 
 :root {
   --background: #282C33;
+  --image-url: url('./assets/starry-bg.png');
+  --primary: #88e788;
+  --secondary: #A9A9A9; 
 }
 
-.snap-home-parent {
-  @apply h-screen max-w-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hidden
+body {
+  background-image: var(--image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  
+}
+
+.home-parent {
+  @apply h-screen max-w-screen scroll-smooth scrollbar-hidden
 }
 
 .snap-home-child {
@@ -28,6 +40,10 @@
 
 .nav-link {
   @apply overflow-hidden relative w-1/5 p-4
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 @layer components {
@@ -50,3 +66,4 @@
     100% { left: 125%; }
   }
 }
+

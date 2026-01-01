@@ -7,9 +7,9 @@ const HomeSection = () => {
     <div>
         <div className='w-[1024px] h-[423px] relative mt-[171px] ml-[123px]'>
             <div className='absolute left-0'>
-                <div className="intro-1 text-[90px] font-[Fira_Code] font-semibold text-white">Hello, I'm Mandy Ly</div>
-                <div className="intro-2 text-[50px] font-[Fira_Code] font-regular text-gray">Software Engineer</div>
-                <div className="intro-3">I'm a software engineer with a passion for learning and creating.</div>
+                <div className="intro-1 text-[90px] font-[Fira_Code] font-semibold text-[var(--primary)] text-shadow-lg/50">Hello, I'm Mandy Ly</div>
+                <div className="intro-2 text-[40px] font-[Fira_Code] font-regular text-[var(--secondary)] text-shadow-lg/50">Software Engineer</div>
+                <div className="intro-3 text-[20px] font-[Fira_Code] font-regular text-[var(--secondary)] w-[700px]">I’m a computer science student interested in building clean, user-focused web applications and learning how systems work end-to-end.</div>
             </div>
             <div className='absolute right-0'>
                 {/* picture */}
