@@ -14,7 +14,7 @@ const Projects = ( {isVisible} ) => {
         {id: 'p1', color: 'gray-400', href: '#p1', src: tictactoe, name: 'Tic Tac Toe', description: 'A simple tic tac toe game', github: 'https://github.com/minli13/tic-tac-toe', live: 'https://stalwart-treacle-d1ea07.netlify.app/'},
         {id: 'p2', color: 'gray-500', href: '#p2', name: 'Study Tracker', description: 'A pomodoro student tracker', github: 'https://github.com/minli13/study-tracker', video: videoUrl},
         {id: 'p3', color: 'gray-600', href: '#p3', video: spotDemo, name: 'TicTacSPOT', description: 'Contributed to a game of Tic Tac Toe played by a user and Boston Dynamics\' SPOT robot', github: 'https://github.com/p-vinh/TicTacSPOT'},
-        {id: 'p4', color: 'gray-700', href: '#p4', video: musicare, name: 'Musicare', description: 'A music recommendation app', github: 'https://github.com/PeterBahariance/CS_4800_MUSICARE', live: 'https://cs-4800-musicare.vercel.app/index.html'},
+        {id: 'p4', color: 'gray-700', href: '#p4', video: musicare, name: 'Musicare', description: 'A music recommendation app built with a team', github: 'https://github.com/PeterBahariance/CS_4800_MUSICARE', live: 'https://cs-4800-musicare.vercel.app/index.html'},
     ]
 
     var swiper = new Swiper(".mySwiper", {
