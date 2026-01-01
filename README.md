@@ -11,7 +11,7 @@ Live Site: https://mandy-portfolio-three.vercel.app/
 - Tailwind CSS
 
 ## Features
-- Responsive design for desktop and mobile
+- Responsive design for desktop
 - Project sections with demos and source code
 - Clean and minimal UI
 
