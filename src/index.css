@@ -59,23 +59,3 @@ body {
     100% { left: 125%; }
   }
 }
-
-/* checkbox for toggle light and dark mode */
-.checkbox-input {
-  display: none;
-}
-
-.toggle-slider {
-  display: inline-block;
-  width: 150px;
-  height: 100px;
-  background-image: url("./assets/light-mode.png");
-  background-size: cover;
-  cursor: pointer;
-  border-radius: 25px;
-  transition: background-image 0.4s;
-}
-
-.checkbox-input:checked + .toggle-slider {
-  background-image: url("./assets/dark-mode.png");
-}
