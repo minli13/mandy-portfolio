@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @utility scrollbar-hidden {
   &::-webkit-scrollbar {
     display: none;
@@ -7,10 +9,12 @@
 }
 
 :root {
-  --background: #282C33;
+  --background: #A9A9A9;
+  --dark-background: #282C33;
   --image-url: url('./assets/starry-bg.png');
   --primary: #88e788;
-  --secondary: #A9A9A9; 
+  --secondary: #3d3b3b; 
+  --dark-secondary: #A9A9A9;
 }
 
 body {
@@ -24,18 +28,6 @@ body {
 
 .home-parent {
   @apply h-screen max-w-screen scroll-smooth scrollbar-hidden
-}
-
-.snap-home-child {
-  @apply max-w-screen overflow-hidden
-}
-
-.snap-projects-parent {
-  @apply w-screen h-screen overflow-x-scroll snap-x snap-mandatory scroll-smooth scrollbar-hidden flex flex-row
-}
-
-.snap-projects-child {
-  @apply w-screen h-full flex-none
 }
 
 .nav-link {
@@ -67,3 +59,22 @@ body {
   }
 }
 
+/* checkbox for toggle light and dark mode */
+.checkbox-input {
+  display: none;
+}
+
+.toggle-slider {
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  background-image: url("./assets/light-mode.png");
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-image 0.4s;
+}
+
+.checkbox-input:checked + .toggle-slider {
+  background-image: url("./assets/dark-mode.png");
+}

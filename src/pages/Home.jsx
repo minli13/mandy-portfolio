@@ -7,6 +7,8 @@ import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import starryBg from '../assets/starry-bg.png'
+import lightMode from '../assets/light-mode.png'
+import darkMode from '../assets/dark-mode.png'
 
 
 const Home = () => {
@@ -81,6 +83,17 @@ const Home = () => {
         };
     }, []);
 
+      function toggleMode() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      }
+    
+      useEffect(() => {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      }, []);
+
     return (
         <div>
             <NavBar 
@@ -90,6 +103,13 @@ const Home = () => {
                 skillsActive={skillsActive} 
                 contactActive={contactActive}
             />
+
+            <div className="fixed top-[100px] right-0">
+              <label className="image-toggle-button" htmlFor="image-toggle">
+                <input type="checkbox" id="image-toggle" className="checkbox-input" onChange={toggleMode} />
+                <span className='toggle-slider'></span>
+              </label>
+            </div>
          
             <div className='' id='window'>
                 {sections.map((section) => (

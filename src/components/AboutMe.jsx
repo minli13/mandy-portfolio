@@ -2,9 +2,9 @@ import React from 'react'
 
 const AboutMe = () => {
   return (
-    <div className='shadow p-8 mt-[50px] bg-[var(--background)] rounded-2xl'>
+    <div className='shadow p-8 mt-[50px] bg-[var(--background)] dark:bg-[var(--dark-background)] rounded-2xl'>
       <h1 className='text-[100px] text-center font-[Fira_Code] text-[var(--primary)] text-shadow-lg/50'>About me</h1>
-      <p className='text-[20px] text-center text-[var(--secondary)] w-[700px]'>
+      <p className='text-[20px] text-center text-[var(--secondary)] dark:text-[var(--dark-secondary)] w-[700px]'>
         I’m a fourth-year computer science student who got into programming 
         by building small projects and wanting to understand how things work 
         behind the scenes. Over time, that curiosity grew into an interest in 

@@ -42,7 +42,7 @@ const Skills = () => {
   return (
     <div className='flex flex-col mt-[10px]'>
       <h1 className='text-[100px] text-[var(--primary)] text-center pt-[40px] font-[Fira_Code] text-shadow-lg/50'>Skills</h1>
-      <p className='text-[var(--secondary)] text-[20px] text-center font-[Fira_Code] mb-[-20px] text-shadow-lg/50'>Hold and drag to scroll each card</p>
+      <p className='text-[var(--secondary)] dark:text-[var(--dark-secondary)] text-[20px] text-center font-[Fira_Code] mb-[-20px] text-shadow-lg/50'>Hold and drag to scroll each card</p>
       <swiper-container 
         effect="cards" 
         rewind="true" 
@@ -54,7 +54,7 @@ const Skills = () => {
           <swiper-slide 
             key={skill.id} 
             id={skill.id} 
-            className={`${skill.color} rounded-lg flex items-center justify-center text-white text-xl font-[Fira_Code]`}
+            className={`${skill.color} rounded-lg flex items-center justify-center text-white dark:text-black text-xl font-[Fira_Code]`}
             style={{ width: skill.width, height: skill.height }}
           >
             <div className='flex-col text-center px-4'>
