@@ -18,9 +18,10 @@
   --dark-secondary: #A9A9A9;
 }
 
-* {
+/* For debugging */
+/* * {
   outline: 1px solid red;
-}
+} */
 
 
 body {
