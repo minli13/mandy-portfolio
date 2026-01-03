@@ -36,28 +36,26 @@ const Projects = ( {isVisible} ) => {
 
 
     return (
-        <div className='swiper mySwiper mt-[100px]'> 
+        <div className='swiper mySwiper w-full align-center gap-0'> 
             <div className='swiper-wrapper'>
                 {projects.map(project => (
                     <div
                         key={project.id}
                         className={`swiper-slide text-center text-xl z-0`}
                     >
-                        <div className={`flex flex-col w-[700px] mx-auto mb-8 p-8 border-[var(--primary)] gap-2 border-2 bg-[var(--background)] dark:bg-[var(--dark-background)]`}>
+                        <div className={`flex flex-col w-full mx-auto p-8 border-[var(--primary)] gap-2 border-2 bg-[var(--background)] dark:bg-[var(--dark-background)]`}>
                             {project.live ?
-                                <a href={`${project.live}`} target='_blank' rel="noopener noreferrer" className='mx-auto w-1/3'>
-                                    <span className='text-4xl text-[var(--primary)] hover:underline'>{`${project.name}`}</span>
+                                <a href={`${project.live}`} target='_blank' rel="noopener noreferrer" className='mx-auto'>
+                                    <p className='text-2xl lg:text-4xl text-[var(--primary)] hover:underline'>{`${project.name}`}</p>
                                 </a>
-                            : <span className='text-4xl text-[var(--primary)]'>{`${project.name}`}</span>
+                            : <p className='mx-auto text-2xl lg:text-4xl text-[var(--primary)]'>{`${project.name}`}</p>
                             }
-                            <span className='text-xl w-[500px] mx-auto text-[var(--secondary)] dark:text-[var(--dark-secondary)]'>{`${project.description}`}</span>
+                            <p className='text-xl mx-auto text-[var(--secondary)] dark:text-[var(--dark-secondary)]'>{`${project.description}`}</p>
                             {project.src ?
-                                <div>
-                                    <img src={`${project.src}`} className='mx-auto w-1/2'></img> 
-                                </div>
+                                <img src={`${project.src}`} className='mx-auto max-w-full w-1/4'></img> 
                             : null}
                             {project.video ?
-                                <ReactPlayer src={`${project.video}`} className='mx-auto w-1/3' controls={true}></ReactPlayer>
+                                <ReactPlayer src={`${project.video}`} className='mx-auto max-w-full' controls={true}></ReactPlayer>
                             : null}
                             <a href={`${project.github}`} target='_blank' rel="noopener noreferrer" className='mx-auto w-[50px]'>
                                 <img src={`${githubLogo}`} className='mx-auto w-[50px] hover:-translate-y-1 hover:scale-110'></img>
@@ -66,9 +64,12 @@ const Projects = ( {isVisible} ) => {
                     </div>
                 ))}
             </div>
-            <div className="swiper-button-next z-100"></div>
-            <div className="swiper-button-prev z-100"></div>
-            <div className="swiper-pagination z-100"></div>
+        
+            <div className="swiper-button-next transform z-100 translate-y-1/2 top-1/2 absolute"></div>
+            <div className="swiper-button-prev transform z-100 translate-y-1/2 top-1/2 absolute"></div>
+         
+              
+            <div className="swiper-pagination z-100 fixed"></div>
 
         </div>
     )

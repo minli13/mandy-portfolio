@@ -18,13 +18,30 @@
   --dark-secondary: #A9A9A9;
 }
 
+* {
+  outline: 1px solid red;
+}
+
+
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
   background-image: var(--image-url);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow-x: hidden;
-  
+}
+
+/* Styles for screens smaller than 768px (tablets and mobile) */
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    height: 100%;
+    background-image: var(--image-url); /* Load a smaller image file */
+    background-size: cover; /* Or 'cover', depending on design needs */
+  }
 }
 
 .home-parent {
@@ -32,7 +49,7 @@ body {
 }
 
 .nav-link {
-  @apply overflow-hidden relative w-1/5 p-4
+  @apply relative w-1/5 p-4 truncate
 }
 
 .shadow {

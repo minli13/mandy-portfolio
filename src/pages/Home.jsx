@@ -7,11 +7,17 @@ import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
+// Things to do:
+// 1. add email contact section
+// 2. update background for light mode
+// 3. mobile responsive
+// 4. arrows for project section is funky
+
 const Home = () => {
     const sections = [
         {id: 'home', color: 'bg-amber-200', height: 'screen'},
         {id: 'about-me', color: 'bg-amber-300', height: 'screen'},
-        {id: 'projects', color: 'bg-amber-400', height: 'screen'},
+        {id: 'projects', color: 'bg-amber-400', height: 'auto'},
         {id: 'skills', color: 'bg-amber-500', height: 'screen'},
         {id: 'contact', color: 'bg-amber-600', height: 'screen'},
     ]
@@ -91,16 +97,17 @@ const Home = () => {
       }, []);
 
     return (
-        <div>
+        <div className='absolute left-0 right-0 '>
             <NavBar 
                 homeActive={homeActive} 
                 aboutMeActive={aboutMeActive} 
                 projectsActive={projectsActive} 
                 skillsActive={skillsActive} 
                 contactActive={contactActive}
+
             />
 
-            <div className="fixed top-[80px] right-[30px]">
+            <div className="absolute top-[80px] right-[20px]">
               <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value="synthwave" onChange={toggleMode}/>
@@ -127,7 +134,7 @@ const Home = () => {
          
             <div className='' id='window'>
                 {sections.map((section) => (
-                    <section key={section.id} id={section.id} className={`min-h-screen flex items-center justify-center h-${section.height}`}>
+                    <section key={section.id} id={section.id} className={` flex items-center justify-center h-${section.height}`}>
                         {section.id == 'home' && <HomeSection />}
                         {section.id == 'about-me' && <AboutMe />}
                         {section.id == 'projects' && <Projects isVisible={isVisible}/>}
