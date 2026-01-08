@@ -5,8 +5,6 @@ import AboutMe from '../components/AboutMe'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
-import lightBackground from '../assets/starry-bg-white.png'
-import darkBackground from '../assets/starry-bg.png'
 import Footer from '../components/Footer'
 
 // Things to do:
@@ -135,7 +133,7 @@ const Home = () => {
          
             <div className='' id='window'>
                 {sections.map((section) => (
-                    <section key={section.id} id={section.id} className={`flex items-center justify-center h-${section.height}`}>
+                    <section key={section.id} id={section.id} className={`py-20 flex items-center justify-center h-screen`}>
                         {section.id == 'home' && <HomeSection />}
                         {section.id == 'about-me' && <AboutMe />}
                         {section.id == 'projects' && <Projects isVisible={isVisible}/>}

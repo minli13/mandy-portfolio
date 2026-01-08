@@ -3,7 +3,7 @@ import React from 'react'
 
 const NavBar = ( {homeActive, aboutMeActive, projectsActive, skillsActive, contactActive} ) => {
   return (
-      <div className='text-center text-black dark:text-white'>
+      <div className='text-center text-black dark:text-white z-200'>
 
         {/* Desktop Navbar */}
         <nav className='hidden max-w-screen left-0 right-0 md:flex md:flex-row md:justify-around fixed top-0 z-100 border-b-2 bg-[var(--background)] dark:bg-[var(--dark-background)]'>
