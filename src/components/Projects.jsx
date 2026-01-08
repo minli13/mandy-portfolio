@@ -43,7 +43,7 @@ const Projects = ( {isVisible} ) => {
                         key={project.id}
                         className={`swiper-slide text-center text-xl z-0`}
                     >
-                        <div className={`flex flex-col w-full mx-auto p-8 border-[var(--primary)] dark:border-[var(--dark-primary)] gap-2 border-2 bg-[var(--background)] dark:bg-[var(--dark-background)]`}>
+                        <div className={`flex flex-col max-w-sm sm:max-w-lg md:max-w-2xl mx-auto p-8 border-[var(--primary)] dark:border-[var(--dark-primary)] border-2 gap-2 bg-[var(--background)] dark:bg-[var(--dark-background)]`}>
                             {project.live ?
                                 <a href={`${project.live}`} target='_blank' rel="noopener noreferrer" className='mx-auto'>
                                     <p className='text-2xl lg:text-4xl text-[var(--primary)] dark:text-[var(--dark-primary)] hover:underline'>{`${project.name}`}</p>
