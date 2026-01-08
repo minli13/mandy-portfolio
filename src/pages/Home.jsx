@@ -7,6 +7,11 @@ import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
+// Things to do:
+// 1. add email contact section
+// 2. add mobile nav bar
+// 3. arrows for project section is funky
+
 const Home = () => {
     const sections = [
         {id: 'home', color: 'bg-amber-200', height: 'screen'},
@@ -91,23 +96,24 @@ const Home = () => {
       }, []);
 
     return (
-        <div>
+        <div className="relative left-0 right-0 dark:text-white text-black bg-cover bg-center bg-no-repeat overflow-x-hidden bg-[image:var(--light-background-image-url)] dark:bg-[image:var(--dark-background-image-url)]">
             <NavBar 
                 homeActive={homeActive} 
                 aboutMeActive={aboutMeActive} 
                 projectsActive={projectsActive} 
                 skillsActive={skillsActive} 
                 contactActive={contactActive}
+
             />
 
-            <div className="fixed top-[80px] right-[30px]">
+            <div className="fixed top-[80px] right-[20px]" id='mode'>
               <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value="synthwave" onChange={toggleMode}/>
 
                     {/* sun icon */}
                     <svg
-                        className="swap-off h-10 w-10 fill-current"
+                        className="swap-off h-10 w-10 fill-[var(--secondary)]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
@@ -127,7 +133,7 @@ const Home = () => {
          
             <div className='' id='window'>
                 {sections.map((section) => (
-                    <section key={section.id} id={section.id} className={`min-h-screen flex items-center justify-center h-${section.height}`}>
+                    <section key={section.id} id={section.id} className={`py-20 flex items-center justify-center h-screen`}>
                         {section.id == 'home' && <HomeSection />}
                         {section.id == 'about-me' && <AboutMe />}
                         {section.id == 'projects' && <Projects isVisible={isVisible}/>}

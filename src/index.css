@@ -10,21 +10,43 @@
 }
 
 :root {
-  --background: #A9A9A9;
-  --dark-background: #282C33;
-  --image-url: url('./assets/starry-bg.png');
-  --primary: #88e788;
-  --secondary: #3d3b3b; 
-  --dark-secondary: #A9A9A9;
+  --background: #FBFBFF; /* nav bar light background */
+  --dark-background: #282C33; /* nav bar dark background */
+  --light-background-image-url: url('./assets/starry-bg-white.png');
+  --dark-background-image-url: url('./assets/starry-bg.png');
+  --primary: #004643;
+  --dark-primary: #88e788;
+  --secondary: #0C1618; /* text color for light */
+  --dark-secondary: #FBFBFF; /* text color for dark */
+}
+
+/* For debugging */
+/* * {
+  outline: 1px solid red;
+} */
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-image: var(--image-url);
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-  
+  overflow-x: hidden; */
+}
+
+/* Styles for screens smaller than 768px (tablets and mobile) */
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Or 'cover', depending on design needs */
+  }
 }
 
 .home-parent {
@@ -32,7 +54,7 @@ body {
 }
 
 .nav-link {
-  @apply overflow-hidden relative w-1/5 p-4
+  @apply relative w-1/5 p-4 truncate
 }
 
 .shadow {
