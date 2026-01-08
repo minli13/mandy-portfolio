@@ -7,7 +7,7 @@ const HomeSection = () => {
     <div>
         <div className='w-full flex flex-col lg:flex-row p-4 m-auto'>
             <div className='flex flex-col'>
-                <div className="intro-1 text-base md:text-lg lg:text-3xl font-[Fira_Code] font-semibold text-[var(--primary)] text-shadow-lg/50">Hello, I'm Mandy Ly</div>
+                <div className="intro-1 text-base md:text-lg lg:text-7xl font-[Fira_Code] font-semibold text-[var(--primary)] dark:text-[var(--dark-primary)] text-shadow-lg/50">Hello, I'm Mandy Ly</div>
                 <div className="intro-2 text-base md:text-lg lg:text-2xl font-[Fira_Code] font-regular text-[var(--secondary)] dark:text-[var(--dark-secondary)]  text-shadow-lg/50">Software Engineer</div>
                 <div className="intro-3 text-base md:text-lg lg:text-xl font-[Fira_Code] font-regular text-[var(--secondary)] dark:text-[var(--dark-secondary)]">I’m a computer science student interested in building clean, user-focused web applications and learning how systems work end-to-end.</div>
             </div>

@@ -5,19 +5,20 @@ import AboutMe from '../components/AboutMe'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
+import lightBackground from '../assets/starry-bg-white.png'
+import darkBackground from '../assets/starry-bg.png'
 import Footer from '../components/Footer'
 
 // Things to do:
 // 1. add email contact section
-// 2. update background for light mode
-// 3. mobile responsive
-// 4. arrows for project section is funky
+// 2. add mobile nav bar
+// 3. arrows for project section is funky
 
 const Home = () => {
     const sections = [
         {id: 'home', color: 'bg-amber-200', height: 'screen'},
         {id: 'about-me', color: 'bg-amber-300', height: 'screen'},
-        {id: 'projects', color: 'bg-amber-400', height: 'auto'},
+        {id: 'projects', color: 'bg-amber-400', height: 'screen'},
         {id: 'skills', color: 'bg-amber-500', height: 'screen'},
         {id: 'contact', color: 'bg-amber-600', height: 'screen'},
     ]
@@ -97,7 +98,7 @@ const Home = () => {
       }, []);
 
     return (
-        <div className='absolute left-0 right-0 '>
+        <div className="relative left-0 right-0 dark:text-white text-black bg-cover bg-center bg-no-repeat overflow-x-hidden bg-[image:var(--light-background-image-url)] dark:bg-[image:var(--dark-background-image-url)]">
             <NavBar 
                 homeActive={homeActive} 
                 aboutMeActive={aboutMeActive} 
@@ -107,14 +108,14 @@ const Home = () => {
 
             />
 
-            <div className="absolute top-[80px] right-[20px]">
+            <div className="fixed top-[80px] right-[20px]">
               <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value="synthwave" onChange={toggleMode}/>
 
                     {/* sun icon */}
                     <svg
-                        className="swap-off h-10 w-10 fill-current"
+                        className="swap-off h-10 w-10 fill-[var(--secondary)]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
@@ -134,7 +135,7 @@ const Home = () => {
          
             <div className='' id='window'>
                 {sections.map((section) => (
-                    <section key={section.id} id={section.id} className={` flex items-center justify-center h-${section.height}`}>
+                    <section key={section.id} id={section.id} className={`flex items-center justify-center h-${section.height}`}>
                         {section.id == 'home' && <HomeSection />}
                         {section.id == 'about-me' && <AboutMe />}
                         {section.id == 'projects' && <Projects isVisible={isVisible}/>}

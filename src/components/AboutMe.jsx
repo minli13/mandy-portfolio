@@ -5,8 +5,8 @@ const AboutMe = () => {
  
       <div className="hover-3d">
         {/* content */}
-        <div className="rounded-2xl p-8 bg-[var(--background)] dark:bg-[var(--dark-background)] ml-10 mr-10 md:ml-30 md:mr-30 lg:ml-[300px] lg:mr-[300px]">
-          <h1 className='text-base md:text-lg lg:text-3xl text-center font-[Fira_Code] text-[var(--primary)] text-shadow-lg/50'>About me</h1>
+        <div className="border-[var(--primary)] dark:border-[var(--dark-primary)] border-2 rounded-2xl p-8 bg-[var(--background)] dark:bg-[var(--dark-background)] ml-10 mr-10 md:ml-30 md:mr-30 lg:ml-[300px] lg:mr-[300px]">
+          <h1 className='text-base md:text-lg lg:text-3xl text-center font-[Fira_Code] text-[var(--primary)] dark:text-[var(--dark-primary)] text-shadow-lg/50'>About me</h1>
           <p className='text-base md:text-lg lg:text-xl text-center font-[Fira_Code] text-[var(--secondary)] dark:text-[var(--dark-secondary)] '>
             I’m a fourth-year computer science student who got into programming 
             by building small projects and wanting to understand how things work 

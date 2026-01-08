@@ -41,7 +41,7 @@ const Skills = () => {
 
   return (
     <div className='flex flex-col w-full '>
-      <h1 className='text-base md:text-lg lg:text-3xl text-[var(--primary)] text-center font-[Fira_Code] text-shadow-lg/50'>Skills</h1>
+      <h1 className='text-base md:text-lg lg:text-7xl text-[var(--primary)] dark:text-[var(--dark-primary)] text-center font-[Fira_Code] text-shadow-lg/50'>Skills</h1>
       <p className='text-base md:text-lg lg:text-xl text-[var(--secondary)] dark:text-[var(--dark-secondary)] text-center font-[Fira_Code] text-shadow-lg/50'>Hold and drag to scroll each card</p>
       <swiper-container 
         effect="cards" 
@@ -54,7 +54,7 @@ const Skills = () => {
           <swiper-slide 
             key={skill.id} 
             id={skill.id} 
-            className={`${skill.color} w-60 h-60 md:w-80 md:h-70 rounded-lg flex items-center justify-center text-white dark:text-black text-xl font-[Fira_Code]`}
+            className={`${skill.color} w-60 h-60 md:w-80 md:h-70 rounded-lg flex items-center justify-center text-black dark:text-white text-xl font-[Fira_Code]`}
           >
             <div className='flex-col text-center px-4'>
               <p className='text-base md:text-lg lg:text-2xl font-bold mb-4'>{skill.id}</p>
