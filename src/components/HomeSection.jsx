@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import profilePic from '../assets/me.png'
 
 const HomeSection = () => {
-
   return (
     <div>
         <div className='w-full flex flex-col md:mt-30 lg:flex-row p-4 m-auto'>

@@ -106,7 +106,7 @@ const Home = () => {
 
             />
 
-            <div className="fixed top-[80px] right-[20px]">
+            <div className="fixed top-[80px] right-[20px]" id='mode'>
               <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value="synthwave" onChange={toggleMode}/>
