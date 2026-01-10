@@ -10,10 +10,11 @@
 }
 
 :root {
-  --background: #FBFBFF; /* nav bar light background */
+  --background: #c7c7b3; /* nav bar light background */
   --dark-background: #282C33; /* nav bar dark background */
-  --light-background-image-url: url('./assets/starry-bg-white.png');
+  /* --light-background-image-url: url('./assets/starry-bg-white.png'); */
   --dark-background-image-url: url('./assets/starry-bg.png');
+  --light-background-image-url: #FFFFE8;
   --primary: #004643;
   --dark-primary: #88e788;
   --secondary: #0C1618; /* text color for light */
