@@ -130,7 +130,7 @@ const Home = () => {
 
                     {/* sun icon */}
                     <svg
-                        className="swap-off h-10 w-10 fill-white"
+                        className="swap-off h-10 w-10 fill-black"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
@@ -139,7 +139,7 @@ const Home = () => {
 
                     {/* moon icon */}
                     <svg
-                        className="swap-on h-10 w-10 fill-current"
+                        className="swap-on h-10 w-10 fill-white"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
