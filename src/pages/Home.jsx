@@ -7,11 +7,6 @@ import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
-// Things to do:
-// 1. add email contact section
-// 2. add mobile nav bar
-// 3. arrows for project section is funky
-
 const Home = () => {
     const sections = [
         {id: 'home', color: 'bg-amber-200', height: 'screen'},
@@ -38,6 +33,10 @@ const Home = () => {
         // show navbar highlight at home section
         if ((scrollPosition >= 0) && (scrollPosition <= windowHeight)) {
             setHomeActive(true);
+            setAboutMeActive(false);
+            setProjectsActive(false);
+            setSkillsActive(false);
+            setContactActive(false);
         } else {
             setHomeActive(false);
         }
@@ -45,6 +44,10 @@ const Home = () => {
         // show navbar highlight at about-me section
         if ((scrollPosition >= windowHeight) && (scrollPosition <= windowHeight * 2)) {
             setAboutMeActive(true);
+            setHomeActive(false);
+            setProjectsActive(false);
+            setSkillsActive(false);
+            setContactActive(false);
         } else {
             setAboutMeActive(false);
         }
@@ -53,6 +56,10 @@ const Home = () => {
         if ((scrollPosition >= windowHeight * 2) && (scrollPosition <= windowHeight * 3)) {
             setIsVisible(true);
             setProjectsActive(true);
+            setHomeActive(false);
+            setAboutMeActive(false);
+            setSkillsActive(false);
+            setContactActive(false);
         } else {
             setIsVisible(false);
             setProjectsActive(false);
@@ -61,6 +68,10 @@ const Home = () => {
         // show navbar highlight at skills section
         if ((scrollPosition >= windowHeight * 3) && (scrollPosition <= windowHeight * 4)) {
             setSkillsActive(true);
+            setHomeActive(false);
+            setAboutMeActive(false);
+            setProjectsActive(false);
+            setContactActive(false);
         } else {
             setSkillsActive(false);
         }
@@ -68,6 +79,10 @@ const Home = () => {
         // show navbar highlight at contact section
         if ((scrollPosition >= windowHeight * 4) && (scrollPosition <= windowHeight * 5)) {
             setContactActive(true);
+            setHomeActive(false);
+            setAboutMeActive(false);
+            setProjectsActive(false);
+            setSkillsActive(false);
         } else {
             setContactActive(false);
         }
@@ -96,7 +111,9 @@ const Home = () => {
       }, []);
 
     return (
-        <div className="relative left-0 right-0 dark:text-white text-black bg-cover bg-center bg-no-repeat overflow-x-hidden bg-[image:var(--light-background-image-url)] dark:bg-[image:var(--dark-background-image-url)]">
+        // for background image
+        // bg-[image:var(--light-background-image-url)] dark:bg-[image:var(--dark-background-image-url)]
+        <div className="relative left-0 right-0 dark:text-white text-black bg-cover bg-center bg-no-repeat overflow-x-hidden bg-[var(--light-background-image-url)] dark:bg-[var(--dark-background-image-url)]">
             <NavBar 
                 homeActive={homeActive} 
                 aboutMeActive={aboutMeActive} 
@@ -106,14 +123,14 @@ const Home = () => {
 
             />
 
-            <div className="fixed top-[80px] right-[20px]" id='mode'>
+            <div className="fixed top-[80px] right-[20px] z-200" id='mode'>
               <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" className="theme-controller" value="synthwave" onChange={toggleMode}/>
 
                     {/* sun icon */}
                     <svg
-                        className="swap-off h-10 w-10 fill-[var(--secondary)]"
+                        className="swap-off h-10 w-10 fill-white"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24">
                         <path
@@ -133,7 +150,7 @@ const Home = () => {
          
             <div className='' id='window'>
                 {sections.map((section) => (
-                    <section key={section.id} id={section.id} className={`py-20 flex items-center justify-center h-screen`}>
+                    <section key={section.id} id={section.id} className={`mt-30 pb-5 md:mt-0 mx-2 flex items-center justify-center max-h-screen md:h-screen`}>
                         {section.id == 'home' && <HomeSection />}
                         {section.id == 'about-me' && <AboutMe />}
                         {section.id == 'projects' && <Projects isVisible={isVisible}/>}
